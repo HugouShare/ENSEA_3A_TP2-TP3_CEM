@@ -38,3 +38,13 @@ Pour max_time = 300 et alpha =1
 
 Avec condition n<=60
 <img width="1599" height="854" alt="image" src="https://github.com/user-attachments/assets/9a1432dc-b6d0-4eb1-ac58-235723003044" />
+on observe que l'on a plus de relfexion au point 101. Les ondes se superposent puis continuent leur chemin respectif SANS inversion de phase.
+
+On passe au cas d'une soft-source : 
+...
+
+Nous supprimons maintenant les sources temporelles et passons à une source spatiale.
+Avec la formule : c0^2.eps0.mu0=1 on déduit c0.
+ON observe que la source spatiale correspond à une soft source
+
+Nous nous proposons maintenant de modifier les codnitions aux limites ie en 1 et max_space cf sujet.
