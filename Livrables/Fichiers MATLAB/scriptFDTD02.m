@@ -6,7 +6,7 @@ clear
 close all
 clc
 
-max_time  = 100;
+max_time  = 300;
 max_space = 201;
 %alpha       = 0.5;
 
@@ -53,7 +53,12 @@ for n = 1:max_time
     % E(max_space) = 0;
     % Hard source
     pulse = exp(-(n*dt-t0)^2/spread^2); % formule exacte dans le sujet ?
-    E(center_problem_space) = pulse;
+    % Hard source coupée à n = 60
+    % if n<=60
+    %     E(center_problem_space) = pulse;
+    % end
+    % Soft source 
+    E(center_problem_space) = E(center_problem_space) + pulse;
     % Boucle interieure sur le champ H
     for j = 1:max_space-1 % quelles valeurs ?
         H(j) = H(j) + alphaE*(E(j+1)-E(j));% quelles valeurs ?
@@ -83,6 +88,4 @@ title(['Simulation du champ electrique a t=' num2str(n*dt*1e9) 'ns'])
 ylabel('E_x [V/m]')
 xlabel('z (position en espace) [m]')
 axis([0*dz (max_space)*dz -1.1 1.1])
-
-
 %end % Fin de la fonction
