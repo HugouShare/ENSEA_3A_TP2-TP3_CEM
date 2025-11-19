@@ -23,3 +23,18 @@ On considère : k indice dans l'espace & n indice temporel
 
 <img width="1677" height="868" alt="image" src="https://github.com/user-attachments/assets/f6301c8a-0fa7-43b3-ad58-b0e680ea06c3" />
 
+Pour alpha = 0.5
+<img width="1639" height="869" alt="image" src="https://github.com/user-attachments/assets/456fcd44-7c83-4cd8-a71a-74c49aff578d" />
+<img width="1665" height="885" alt="image" src="https://github.com/user-attachments/assets/ea9fa61e-b867-47ce-b6bf-301d402c3476" />
+
+Pour alpha = 1.1
+<img width="1617" height="852" alt="image" src="https://github.com/user-attachments/assets/ca4df660-9abb-47b9-bb84-d2f96e9592ae" />
+<img width="1629" height="841" alt="image" src="https://github.com/user-attachments/assets/46157159-dc2f-40ba-8c20-12664f53eaa3" />
+
+Pour max_time = 300 et alpha =1
+<img width="1601" height="841" alt="image" src="https://github.com/user-attachments/assets/3c0281f1-b197-472d-94cc-1f40c81605b0" />
+<img width="1592" height="826" alt="image" src="https://github.com/user-attachments/assets/fb8661cc-02a4-4da2-81b0-5bea142e214d" />
+<img width="1662" height="876" alt="image" src="https://github.com/user-attachments/assets/f567c141-d5cd-4866-a3a8-f1c71527ccb1" />
+
+Avec condition n<=60
+<img width="1599" height="854" alt="image" src="https://github.com/user-attachments/assets/9a1432dc-b6d0-4eb1-ac58-235723003044" />
