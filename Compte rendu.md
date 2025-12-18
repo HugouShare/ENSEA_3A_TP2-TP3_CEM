@@ -125,3 +125,13 @@ On observe que la source spatiale correspond à une soft source
 Nous nous proposons maintenant de modifier les conditions aux limites ie en 1 et `max_space` cf sujet.
 
 Pour $\alpha=0.5$ :
+
+- mettre screen onde disparait + phase
+- Mettre partie du code avec les Eright1 = E(max...
+- Comme nous avons paramétré notre $dt$ avec $\alpha$, en le laissant à 0.5, on parcourt 1 pas spatial en 2 itérations (2 pas temporels) et donc on respecte bien notre condition de type $E(1)^n=E(2)^{n-2}$
+
+Pour $\alpha = 1$
+
+- mettre screen onde disparait + phase
+- rien eu besoin de modifier
+
