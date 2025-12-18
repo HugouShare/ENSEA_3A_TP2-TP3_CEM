@@ -242,12 +242,65 @@ En préambule deux modifications avant d’introduire le domaine diélectrique d
 - placer la source (pulse gaussien comme dans le script précédent au point $z=0.001$ (cela revient à exciter E(2)) ; ceci pour éviter de générer deux ondes divergentes et se concentrer sur l’onde électromagnétique se propageant dans le sens « +z »,
 - lancer enfin notre code `scriptFDTD05` pour `max_time=1500` et vérifier que la propagation se déroule correctement.
 
-#### Modfications faites 
+#### scriptFDTD05  
 
+Nous commençons par modifier l'emplacement de la source ainsi que la configuration du problème de manière à avoir :
 - $L=0.5$ m
 - $dz=0.001$ m
-- $t_0=400$
--
+- $t_0=400$  
+
+```MATLAB
+max_time  = 1500;
+max_space = 501;
+```
+
+```MATLAB
+% Definition des discretisations
+L = 0.5;                   % longueur du domaine en m 
+dz = L./(max_space-1);   % pas spatial 
+alpha = 1;
+dt = alpha*dz/c0; % dt = alpha.(dz/co)
+alphaE = -1./eps0 .* dt./dz;
+alphaH = -1./mu0 .* dt./dz;
+```
+
+```MATLAB
+% Centre du pulse
+center_problem_space = 3; % spatial : au centre
+t0 = 400*dt; % source en temps maximale a cet instant
+```
+
+On obtient alors les résultats suivants :  
+<img width="1618" height="839" alt="image" src="https://github.com/user-attachments/assets/e12a1d89-f090-47ad-8a3a-86ef0fe16184" />  
+
+#### scriptFDTD06  
+
+Enfin, nous modifions notre code de façon à que le calcul du champs E tienne maintenant compte d’une valeur 𝜺𝒓 = 𝟏 pour z compris entre 0 et 0.2m et que dans le « slab » diélectrique, soit pour z compris entre 0.2 et 0.5m, on ait 𝜺𝒓 = 𝟒.  
+
+On ajoute alors le code suivant :  
+```MATLAB
+for u=1:max_space
+    if (u>=201 & u<=501)
+        alphaHdielec(u) = alphaH./epsr;
+    else
+        alphaHdielec(u) = alphaH;
+    end
+end
+```
+
+Et on remplace :  
+```MATLAB
+    % Boucle interieure sur le champ E
+    for k = 2:max_space-1 
+        E(k) = E(k) + alphaHdielec(k)*(H(k)-H(k-1));
+    end
+```
+
+On obtient alors les résultats suivants :  
+<img width="1651" height="836" alt="image" src="https://github.com/user-attachments/assets/85a21cb4-0659-4e2d-9bb8-bbd6b6b6a256" />  
+<img width="1600" height="828" alt="image" src="https://github.com/user-attachments/assets/603a57ce-7123-459c-ac7b-48993a402e40" />  
+<img width="1654" height="843" alt="image" src="https://github.com/user-attachments/assets/2a290471-a69e-4248-86a0-146aac89ca05" />  
+
 
 
 
