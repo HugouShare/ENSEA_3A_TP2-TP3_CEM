@@ -138,7 +138,7 @@ Dans le programme proposé, on utilise une source « dure » (« **hard** » sou
 <img width="1599" height="854" alt="image" src="https://github.com/user-attachments/assets/9a1432dc-b6d0-4eb1-ac58-235723003044" />
 on observe que l'on a plus de relfexion au point 101. Les ondes se superposent puis continuent leur chemin respectif SANS inversion de phase.
 
-### 2.2 Les sources spatiales => scriptFDTD03
+### 2.2 Les sources spatiales => scriptFDTD03`
 
 On passe au cas d'une soft-source : 
 ...
