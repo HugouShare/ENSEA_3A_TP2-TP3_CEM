@@ -4,7 +4,7 @@
 
 ### Objectifs :  
 
-- Calcul des champs électrique / magnétique par la méthode des différences finies
+- Calcul des champs électriques / magnétiques par la méthode des différences finies
 - Développement d’un code de calcul temporel
 
 ### Compétences visées :  
@@ -22,7 +22,8 @@ Octave)
 ## Introduction  
 
 Durant ce TP, nous traitons d'électrodynamique dans un contexte de CEM.  
-Ainsi, nous allons nous intéresser à la propagation d’une onde électromagnétique et calculer, selon une unique dimension (z par exemple), ses composantes Ex et Hy via la résolution des équations de Maxwell. Nous obtiendrons alors les différentes valeurs de Ex et Hy au cours du temps t et en tout point de l'axe z. 
+Ainsi, nous allons nous intéresser à la propagation d’une onde électromagnétique et calculer, selon une unique dimension (z par exemple), ses composantes Ex et Hy via la résolution des équations de Maxwell.  
+Nous obtiendrons alors les différentes valeurs de Ex et Hy au cours du temps t et en tout point de l'axe z. 
 
 ## 1. Schéma FDTD  
 
@@ -65,10 +66,11 @@ Où :
 Enfin, nous allons utiliser une source d'excitation au profil Gaussien imposée au centre du domaine de calcul, dont l'expression est la suivante :  
 <img width="381" height="39" alt="image" src="https://github.com/user-attachments/assets/ea760d5d-90f6-4639-bce8-2042c784ad1b" />  
 
-
 ## Note durant TP  
 
-On considère : $k$ indice dans l'espace & $n$ indice temporel.
+On considère : 
+`k : indice dans l'espace`  
+`n : indice temporel`  
 
 ## Exercice `scriptFTD01.m` 
 
@@ -109,7 +111,7 @@ Pour max_time = 300 et alpha =1
 <img src="https://github.com/user-attachments/assets/f567c141-d5cd-4866-a3a8-f1c71527ccb1" width="32%" />
 </p>
 
-Avec condition n<=60
+Avec condition n<=60 (hard source)
 <img width="1599" height="854" alt="image" src="https://github.com/user-attachments/assets/9a1432dc-b6d0-4eb1-ac58-235723003044" />
 on observe que l'on a plus de relfexion au point 101. Les ondes se superposent puis continuent leur chemin respectif SANS inversion de phase.
 
