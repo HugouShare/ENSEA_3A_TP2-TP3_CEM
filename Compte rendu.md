@@ -65,14 +65,22 @@ Où :
 Enfin, nous allons utiliser une source d'excitation au profil Gaussien imposée au centre du domaine de calcul, dont l'expression est la suivante :  
 <img width="381" height="39" alt="image" src="https://github.com/user-attachments/assets/ea760d5d-90f6-4639-bce8-2042c784ad1b" />  
 
-## Note durant TP  
+### 1.3 Test de la condition de stabilité
+
+Dans l’algorithme présenté initialement, le coefficient $\alpha$ joue le rôle de critère de stabilité. On
+sait (voir le cours FDTD) que ce critère ne doit pas dépasser 1 et est lié aux pas temporel et spatial du
+schéma et aux propriétés du milieu de propagation. Ainsi, augmenter la valeur du coefficient $\alpha$ permet,
+pour un même nombre d’itérations en temps (paramètre $n$ précédent) d’atteindre un temps de
+simulation plus important. Toutefois, il n’est pas bon d’augmenter indéfiniment $\alpha$ sous peine de
+divergence du calcul.
 
 On considère :  
 `k : indice dans l'espace`  
 `n : indice temporel`  
 
-## Exercice `scriptFTD01.m` 
+### Exercice `scriptFTD01.m` 
 
+#### Pour $\alpha = 1$
 <!-- Ligne 1 -->
 <p float="left">
   <img src="https://github.com/user-attachments/assets/ce12d775-6156-4a4c-8bd4-19c1c71f30a1" width="48%" />
@@ -85,14 +93,14 @@ On considère :
   <img src="https://github.com/user-attachments/assets/f6301c8a-0fa7-43b3-ad58-b0e680ea06c3" width="48%" />
 </p>
 
-Pour alpha = 0.5
+#### Pour $\alpha = 0.5$
 <!-- Ligne 3 -->
 <p float="left">
 <img src="https://github.com/user-attachments/assets/456fcd44-7c83-4cd8-a71a-74c49aff578d" width="48%" />
 <img src="https://github.com/user-attachments/assets/ea9fa61e-b867-47ce-b6bf-301d402c3476" width="48%" />
 </p>
 
-Pour alpha = 1.1
+#### Pour $\alpha = 1.1$
 <!-- Ligne 4 -->
 <p float="left">
 <img src="https://github.com/user-attachments/assets/ca4df660-9abb-47b9-bb84-d2f96e9592ae" width="48%" />
@@ -100,9 +108,15 @@ Pour alpha = 1.1
 </p>
 
 >[!IMPORTANT]
-> On remarque bien que dépasser le critère de stabilitié, le signal explose complètement et diverge.
+> On remarque bien que lorsque l'on dépasse le critère de stabilitié, le signal explose complètement et diverge.
 
-Pour max_time = 300 et alpha =1
+## 2. Les sources d’excitation => `scriptFDTD02` et `scriptFDTD03`
+
+### 2.1 Les sources temporelles => `scriptFDTD02`
+
+Dans le programme proposé, on utilise une source « dure » (« **hard** » source). Comme évoqué précédemment, ce type de source correspond à l’imposition d’une condition en un point spatial du domaine de calcul (ici au milieu du domaine de calcul : `center_problem_space`).
+
+Pour `max_time` = 300 et `alpha` =1
 <!-- Ligne 5 -->
 <p float="left">
 <img src="https://github.com/user-attachments/assets/3c0281f1-b197-472d-94cc-1f40c81605b0" width="32%" />
@@ -123,7 +137,7 @@ On observe que la source spatiale correspond à une soft source
 
 Nous nous proposons maintenant de modifier les conditions aux limites ie en 1 et `max_space` cf sujet.
 
-Pour $\alpha=0.5$ :
+#### Pour $\alpha=0.5$
 
 - mettre screen onde disparait + phase
 <p float="left">
@@ -132,7 +146,8 @@ Pour $\alpha=0.5$ :
 <img src="https://github.com/user-attachments/assets/7e154423-71df-47b1-8a6d-91705853ac4c" width="32%" />
 </p>
 
-- Mettre partie du code avec les Eright1 = E(max...
+- code :
+- 
 ```MATLAB
 alpha = 0.5;
 ```  
@@ -187,14 +202,14 @@ for n = 1:max_time
 end 
 % Fin boucle temporelle
 ```  
-- Comme nous avons paramétré notre $dt$ avec $\alpha$, en le laissant à 0.5, on parcourt 1 pas spatial en 2 itérations (2 pas temporels) et donc on respecte bien notre condition de type $E(1)^n=E(2)^{n-2}$
+- Comme nous avons paramétré notre $dt$ avec $\alpha$, en le laissant à 0.5, ous parcourons un pas spatial en deux itérations (deux pas temporels) et donc nous respectons bien notre condition de type $E(1)^n=E(2)^{n-2}$
 
-Pour $\alpha = 1$
-- code
+#### Pour $\alpha = 1$
+
+- code :
 ```MATLAB
 alpha = 1;
 ```  
-- mettre screen onde disparait + phase
 <img width="642" height="499" alt="image" src="https://github.com/user-attachments/assets/edc76768-cddd-4ec9-94fe-9db79303c410" />  
-- rien eu besoin de modifier
+- Rien eu besoin de modifier d'autres
 
