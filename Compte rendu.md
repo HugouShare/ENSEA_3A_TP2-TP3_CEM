@@ -322,11 +322,17 @@ for u=1:max_space
     end
 end
 ```
-On obtient alors :  
-<img width="1613" height="836" alt="image" src="https://github.com/user-attachments/assets/7dbf077d-b160-48bc-b142-8871f93870be" />  
-<img width="1607" height="839" alt="image" src="https://github.com/user-attachments/assets/0fa6477d-d679-4eee-ac26-5f59eec9c2c6" />  
-<img width="1611" height="837" alt="image" src="https://github.com/user-attachments/assets/fa137357-fa65-45a3-b9b9-b473afdb7bdb" />  
-<img width="1600" height="846" alt="image" src="https://github.com/user-attachments/assets/302aec69-e150-4830-90e2-204628e44fbe" />  
+On obtient alors : 
+<p float="left">
+<img src="https://github.com/user-attachments/assets/7dbf077d-b160-48bc-b142-8871f93870be" width="48%" />
+<img src="https://github.com/user-attachments/assets/0fa6477d-d679-4eee-ac26-5f59eec9c2c6" width="48%" />
+</p>
+
+<p float="left">
+<img src="https://github.com/user-attachments/assets/fa137357-fa65-45a3-b9b9-b473afdb7bdb" width="48%" />
+<img src="https://github.com/user-attachments/assets/302aec69-e150-4830-90e2-204628e44fbe" width="48%" />
+</p>
+ 
 <img width="1626" height="857" alt="image" src="https://github.com/user-attachments/assets/c1a6175d-1408-42d0-9dfa-dff79c5068e3" />  
 
 # Travaux pratiques 3 CEM : méthode DF 3D pour la modélisation de cavités résonantes  
