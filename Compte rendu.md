@@ -116,7 +116,7 @@ On considère :
 
 Dans le programme proposé, on utilise une source « dure » (« **hard** » source). Comme évoqué précédemment, ce type de source correspond à l’imposition d’une condition en un point spatial du domaine de calcul (ici au milieu du domaine de calcul : `center_problem_space`).
 
-Pour `max_time` = 300 et `alpha` =1
+#### Pour `max_time` = 300 et `alpha` =1
 <!-- Ligne 5 -->
 <p float="left">
 <img src="https://github.com/user-attachments/assets/3c0281f1-b197-472d-94cc-1f40c81605b0" width="32%" />
@@ -124,9 +124,11 @@ Pour `max_time` = 300 et `alpha` =1
 <img src="https://github.com/user-attachments/assets/f567c141-d5cd-4866-a3a8-f1c71527ccb1" width="32%" />
 </p>
 
-Avec condition n<=60 (hard source)
+#### Avec condition $n≤60$ (hard source)
 <img width="1599" height="854" alt="image" src="https://github.com/user-attachments/assets/9a1432dc-b6d0-4eb1-ac58-235723003044" />
 on observe que l'on a plus de relfexion au point 101. Les ondes se superposent puis continuent leur chemin respectif SANS inversion de phase.
+
+### 2.2 Les sources spatiales => scriptFDTD03
 
 On passe au cas d'une soft-source : 
 ...
@@ -134,6 +136,8 @@ On passe au cas d'une soft-source :
 Nous supprimons maintenant les sources temporelles et passons à une source spatiale.
 Avec la formule : `c0^2.eps0.mu0=1` on déduit `c0`.
 On observe que la source spatiale correspond à une soft source
+
+## 3. Simulations en espace libre : les conditions de non-réflexion (« magic time-step ») => `scriptFDTD04` et `scriptFDTD05`
 
 Nous nous proposons maintenant de modifier les conditions aux limites ie en 1 et `max_space` cf sujet.
 
@@ -212,4 +216,22 @@ alpha = 1;
 ```  
 <img width="642" height="499" alt="image" src="https://github.com/user-attachments/assets/edc76768-cddd-4ec9-94fe-9db79303c410" />  
 - Rien eu besoin de modifier d'autres
+
+## 4. Simuler la propagation d’une onde plane pour la traversée d’un diélectrique (1-D) sans pertes => `scriptFDTD05` et `scriptFDTD06`
+
+La prise en compte d’un matériau (ou d’un objet appelé « slab » dans la suite) nécessite de revenir aux équations de Maxwell. Ainsi, on peut réécrire ces dernières en tenant compte de la permittivité diélectrique relative $\varepsilon_r$ :
+
+<img width="657" height="149" alt="image" src="https://github.com/user-attachments/assets/d276242d-342e-4d55-9447-dc9745000b42" />
+
+On nous demande donc de faire :
+En préambule deux modifications avant d’introduire le domaine diélectrique dans la simulation :
+- modifier les programmes précédents pour traiter le cas d’un domaine de calculs $L=0.5m$ (on adaptera le code pour obtenir un pas spatial $dz=0.001m$ cette fois !!),
+- conserver des conditions absorbantes « magiques » comme dans le script `scriptFDTD04`,
+- placer la source (pulse gaussien comme dans le script précédent au point $z=0.001$ (cela revient à exciter $E(2)$) ; ceci pour éviter de générer deux ondes divergentes et se concentrer sur l’onde électromagnétique se propageant dans le sens « +z »,
+- lancer enfin notre code `scriptFDTD05` pour `max_time=1500 et vérifier que la propagation se déroule correctement.
+
+
+
+
+
 
