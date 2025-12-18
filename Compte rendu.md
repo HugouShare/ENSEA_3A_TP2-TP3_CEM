@@ -310,6 +310,25 @@ On obtient alors les résultats suivants :
 >[!IMPORTANT]
 > Sur le graph en bas à gauche on observe que l'onde a été réfléchie et legerement atténuée. En effet quand l'on change de dielectrique, l'onde est plus lente et le pas temporel définis pour avancer d'un pas spacial n'est plus valide. Notre condition au bord en devient donc affecté et ne met pas à jour assez vite par rapport au déplacement spatial donc l'onde n'est pas complétement atténuée.
 
+On teste ensuite en modifiant les conditions de permittivité fixées précédemment : on considère εr = 1 pour z compris entre 0 et 0.2m et z compris entre 0.4 et 0.5m, puis εr = 4 pour z compris entre 0.2 et 0.4m. 
+
+On modifie alors le code de la manière suivante :  
+```MATLAB
+for u=1:max_space
+    if (u>=201 & u<=401)
+        alphaHdielec(u) = alphaH./epsr;
+    else
+        alphaHdielec(u) = alphaH;
+    end
+end
+```
+On obtient alors :  
+<img width="1613" height="836" alt="image" src="https://github.com/user-attachments/assets/7dbf077d-b160-48bc-b142-8871f93870be" />  
+<img width="1607" height="839" alt="image" src="https://github.com/user-attachments/assets/0fa6477d-d679-4eee-ac26-5f59eec9c2c6" />  
+<img width="1611" height="837" alt="image" src="https://github.com/user-attachments/assets/fa137357-fa65-45a3-b9b9-b473afdb7bdb" />  
+<img width="1600" height="846" alt="image" src="https://github.com/user-attachments/assets/302aec69-e150-4830-90e2-204628e44fbe" />  
+<img width="1626" height="857" alt="image" src="https://github.com/user-attachments/assets/c1a6175d-1408-42d0-9dfa-dff79c5068e3" />  
+
 
 
 
