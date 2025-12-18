@@ -239,7 +239,7 @@ On nous demande donc de faire :
 En préambule deux modifications avant d’introduire le domaine diélectrique dans la simulation :
 - modifier les programmes précédents pour traiter le cas d’un domaine de calculs $L=0.5m$ (on adaptera le code pour obtenir un pas spatial $dz=0.001m$ cette fois !!),
 - conserver des conditions absorbantes « magiques » comme dans le script `scriptFDTD04`,
-- placer la source (pulse gaussien comme dans le script précédent au point $z=0.001$ (cela revient à exciter $E(2)$) ; ceci pour éviter de générer deux ondes divergentes et se concentrer sur l’onde électromagnétique se propageant dans le sens « +z »,
+- placer la source (pulse gaussien comme dans le script précédent au point $z=0.001$ (cela revient à exciter E(2)) ; ceci pour éviter de générer deux ondes divergentes et se concentrer sur l’onde électromagnétique se propageant dans le sens « +z »,
 - lancer enfin notre code `scriptFDTD05` pour `max_time=1500 et vérifier que la propagation se déroule correctement.
 
 
