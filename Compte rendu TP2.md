@@ -1,4 +1,4 @@
-# Travaux pratiques 2 CEM : utilisation de la méthode DF pour la simulation CEM
+# TP 2 CEM : utilisation de la méthode DF pour la simulation CEM
 
 ## Sommaire  
 
@@ -344,7 +344,7 @@ On obtient alors les résultats suivants :
 > Sur le graph en haut à droite on remarque bien une déformation et un ralentissement lorsque l'on dépasse 0,2m (changement de milieu).
 
 >[!IMPORTANT]
-> Sur le graph en bas à gauche on observe que l'onde a été réfléchie et legerement atténuée. En effet quand l'on change de dielectrique, l'onde est plus lente et le pas temporel définis pour avancer d'un pas spacial n'est plus valide. Notre condition au bord en devient donc affecté et ne met pas à jour assez vite par rapport au déplacement spatial donc l'onde n'est pas complétement atténuée.
+> Sur le graphe en bas à gauche on observe que l'onde a été réfléchie et legerement atténuée. En effet quand l'on change de dielectrique, l'onde est plus lente et le pas temporel définis pour avancer d'un pas spacial n'est plus valide. Notre condition au bord en devient donc affecté et ne met pas à jour assez vite par rapport au déplacement spatial donc l'onde n'est pas complétement atténuée.
 
 On teste ensuite en modifiant les conditions de permittivité fixées précédemment : on considère εr = 1 pour z compris entre 0 et 0.2m et z compris entre 0.4 et 0.5m, puis εr = 4 pour z compris entre 0.2 et 0.4m. 
 
