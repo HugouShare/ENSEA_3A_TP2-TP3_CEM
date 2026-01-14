@@ -81,8 +81,10 @@ f = (c/2) * sqrt( (m/a)^2 + (n/b)^2 + (p/d)^2 );
 end
 ```  
 
-<img width="628" height="325" alt="image" src="https://github.com/user-attachments/assets/d82ff249-16ce-486e-874d-c552764f23ca" />
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/d82ff249-16ce-486e-874d-c552764f23ca" width="48%" />
+  <img src="https://github.com/user-attachments/assets/64e3d351-f07d-42c5-a0f0-a1240c090be2" width="48%" />
+</p>
 
-<img width="1580" height="849" alt="image" src="https://github.com/user-attachments/assets/64e3d351-f07d-42c5-a0f0-a1240c090be2" />
 
 
