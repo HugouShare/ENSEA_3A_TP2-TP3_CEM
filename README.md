@@ -1,13 +1,5 @@
 # 💼 ENSEA_3A_TP2&TP3_CEM 💼
 
-## 📋 Table des matières
-
-- [Équipe](#équipe)
-- [Introduction](#introduction)
-- [Organisation du repository](#organisation-du-repository)
-
----
-
 ## 👨🏽 Équipe
 
 <div align="left">
