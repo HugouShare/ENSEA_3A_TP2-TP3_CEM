@@ -13,8 +13,9 @@
 
 ## 🎯 Organisation du repository
 Vous trouverez, dans le repository, différents dossiers avec :
-- "_Sujet TP2_" : le sujet fournis par le professeur pour le TP2
-- "_Sujet TP3_" : le sujet fournis par le professeur pour le TP3
-- "_Livrables_" : les fichiers générés ou utilisés par nous-même durant le TP
+- "_Sujet de TP2_" : le sujet fournis par le professeur pour le TP2
+- "_Sujet de TP3_" : le sujet fournis par le professeur pour le TP3
+- "_Livrables TP2_" : les fichiers générés ou utilisés par nous-même durant le TP2
+- "_Livrables TP3_" : les fichiers générés ou utilisés par nous-même durant le TP3
 - "_Compte rendu TP2_" : un fichier markdown servant de rapport de TP2  
 - "_Compte rendu TP3_" : un fichier markdown servant de rapport de TP3   
