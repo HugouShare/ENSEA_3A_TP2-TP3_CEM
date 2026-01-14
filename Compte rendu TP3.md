@@ -38,6 +38,8 @@
     </ul>
   </li>
 
+  <li><a href="#conclusion">Conclusion</a></li>
+  
   <li><a href="#fin">FIN</a></li>
 </ul>
 
@@ -226,5 +228,14 @@ Les fréquences de résonance sont logiques : elles correspondent aux modes prop
 La présence du diélectrique dans la cavité diminue légèrement les fréquences de résonance et modifie l’amplitude des modes.
 
 Cela illustre que le milieu affecte la propagation et les résonances dans la cavité CRBM.
+
+## Conclusion
+
+Ce TP a permis de mettre en œuvre une approche complète de modélisation électromagnétique d’une cavité résonante à l’aide de la méthode temporelle FDTD 3D. En partant d’un cadre théorique basé sur l’équation de Helmholtz et l’analyse modale d’une cavité parallélépipédique, nous avons établi les expressions analytiques des fréquences propres de résonance, caractérisées par les triplets $(m,n,p)$. Ces résultats ont servi de référence pour l’interprétation des simulations numériques.
+
+L’implémentation du code FDTD a permis de simuler le comportement temporel des champs électromagnétiques dans la cavité. L’enregistrement des composantes $E_x$, $E_y$ et $E_z$ au cours du temps a ensuite rendu possible une analyse fréquentielle par transformée de Fourier. Les spectres obtenus mettent clairement en évidence les raies modales correspondant aux fréquences propres de la cavité, ce qui valide le bon fonctionnement du modèle numérique.
+
+La comparaison entre la cavité vide et la cavité chargée par un diélectrique $(\varepsilon_r = 3)$ a montré une modification nette du comportement électromagnétique. Les fréquences de résonance sont globalement décalées vers les basses fréquences dans le cas chargé, ce qui est conforme à la théorie puisque l’augmentation de la permittivité effective réduit la vitesse de propagation des ondes dans la cavité. De plus, les amplitudes relatives des modes sont modifiées, traduisant un changement dans la distribution spatiale et énergétique des champs.
+
 
 ## FIN
