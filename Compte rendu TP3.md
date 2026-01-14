@@ -128,3 +128,14 @@ La charge est représentée par un volume pavé diélectrique :
 - Propriétés diélectriques : $\varepsilon_r$ = 3 dans toutes les directions
 
 ### 5°) On réalise les modèles numériques de CRBM dans deux fichiers MATLAB distincts (`FDTD_crbm_vide.m` et `FDTD_crbm_chargee.m`) en aménageant le code `FDTD.m` précédent.
+
+<img width="1597" height="847" alt="image" src="https://github.com/user-attachments/assets/39b68238-6f2a-4618-ad88-6c279992f1ab" />
+
+Les 2 courbes sont bien superposée et légerement décalées sur les dernières itérations.
+
+### 6°) On va stocker les valeurs des champs Ex, Ey et Ez à chaque itération dans un fichier (respectivement `result_vide.txt` et `result_chargee.txt`) : le fichier comportera autant de lignes que d’itérations FDTD et 3 colonnes (pour Ex, Ey et Ez).
+
+Dans quel but ?
+
+Les champs électriques sont stockés à chaque itération temporelle afin de permettre une analyse temporelle et fréquentielle (FFT) du comportement de la cavité. La comparaison entre la cavité vide et chargée met en évidence l’influence du milieu diélectrique sur la dynamique des champs et les modes excités.
+
