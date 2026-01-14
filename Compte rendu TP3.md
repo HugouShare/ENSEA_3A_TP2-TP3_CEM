@@ -2,6 +2,47 @@
 
 ## Sommaire
 
+<details open>
+<summary><strong>📑 Sommaire</strong></summary>
+
+<ul>
+  <li><a href="#contexte-global">Contexte global</a>
+    <ul>
+      <li><a href="#objectifs-">Objectifs</a></li>
+      <li><a href="#compétences-visées-">Compétences visées</a></li>
+      <li><a href="#contrôle-des-connaissances-">Contrôle des connaissances</a></li>
+      <li><a href="#aide">Aide</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#introduction">Introduction</a></li>
+
+  <li><a href="#théorie-modale-dune-cage-de-faraday-sans-pertes">Théorie modale d’une cage de Faraday sans pertes</a></li>
+
+  <li><a href="#code-numérique--prise-en-main-du-logiciel-fdtm">Code numérique : prise en main du logiciel FDTD.m</a>
+    <ul>
+      <li><a href="#1-identification-des-différents-parties-du-code-du-calcul-cf-tp01m">1° Identification du code</a></li>
+      <li><a href="#2-lutilisation-dun-code-temporel-de-type-fdtd-présente-plusieurs-avantages-majeurs-">2° Avantages du FDTD</a></li>
+      <li><a href="#3-on-ne-modifie-pas-le-script-car-nous-avons-déjà-ces-paramètres">3° Paramètres</a></li>
+      <li><a href="#4-sauvegarde-des-résultats-de-vec-e-dans-etstxt">4° Sauvegarde des champs</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#code-numérique--modélisations-de-cavités--vide--et--chargée-">Code numérique : cavités vide et chargée</a>
+    <ul>
+      <li><a href="#5-on-réalise-les-modèles-numériques-de-crbm-dans-deux-fichiers-matlab-distincts-fdtd_crbm_videm-et-fdtd_crbm_chargeem-en-aménageant-le-code-fdtdm-précédent">5° Modélisation CRBM</a></li>
+      <li><a href="#6-on-va-stocker-les-valeurs-des-champs-ex-ey-et-ez-à-chaque-itération-dans-un-fichier-respectivement-result_videtxt-et-result_chargeetxt--le-fichier-comportera-autant-de-lignes-que-ditérations-fdtd-et-3-colonnes-pour-ex-ey-et-ez">6° Stockage des champs</a></li>
+      <li><a href="#7-visualisation-les-résultats-temporels-obtenus-à-laide-de-matlab-plot-en-représentant-le-temps-de-la-simulation-en-abscisse-et-les-champs-électriques-en-ordonnée">7° Résultats temporels</a></li>
+      <li><a href="#8-on-utilise-le-programme-fft_crbmm-afin-de-transposer-nos-résultats-temporels-en-données-fréquentielles">8° FFT</a></li>
+      <li><a href="#9-on-veut-visualiser-les-résultats-fréquentiels-obtenus-sur-la-bande-de-fréquence-allant-de-80mhz-à-150mhz">9° Analyse fréquentielle</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#fin">FIN</a></li>
+</ul>
+
+</details>
+
 ## Contexte global  
 
 ### Objectifs :  
@@ -158,3 +199,32 @@ Explications
         
 3. 20*log10(abs(...)) : amplitude en dB pour visualisation
 4. Les spectres permettent de voir les raies modales et l’influence du diélectrique.
+
+FFT cavité vide :
+<img width="1534" height="850" alt="image" src="https://github.com/user-attachments/assets/04c4af1b-8390-496d-9306-a594df9ea8e5" />
+
+FFT cavité chargée :
+<img width="1559" height="850" alt="image" src="https://github.com/user-attachments/assets/b6c7805e-eb55-4173-ac2e-ffba67556317" />
+
+### 9°) On veut visualiser les résultats fréquentiels obtenus sur la bande de fréquence allant de 80MHz à 150MHz.
+
+On doit identifier les fréquences de résonance dans la gamme [80MHz, 150MHz]. Et questionner si :
+- Les résultats sont-ils logiques ?
+- Que peut-on en déduire sur l’influence du diélectrique dans la simulation ?
+
+<img width="1595" height="838" alt="image" src="https://github.com/user-attachments/assets/5b4d8166-3561-4dce-ae40-f96fd9f392ea" />
+
+Explications
+1. Bande de fréquence 80–150 MHz : filtre via idx_band
+2. Identification des pics avec findpeaks : permet de récupérer les fréquences de résonance
+3. Cavité vide vs cavité chargée :
+   - Cavité chargée → pics légèrement décalés vers le bas et amplitude modifiée
+   - Cela traduit l’influence du diélectrique : augmentation de la permittivité → diminution des fréquences propres
+
+Les fréquences de résonance sont logiques : elles correspondent aux modes propres de la cavité.
+
+La présence du diélectrique dans la cavité diminue légèrement les fréquences de résonance et modifie l’amplitude des modes.
+
+Cela illustre que le milieu affecte la propagation et les résonances dans la cavité CRBM.
+
+## FIN
