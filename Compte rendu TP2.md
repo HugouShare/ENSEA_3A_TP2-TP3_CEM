@@ -371,7 +371,7 @@ On obtient alors :
  
 <img width="1626" height="857" alt="image" src="https://github.com/user-attachments/assets/c1a6175d-1408-42d0-9dfa-dff79c5068e3" />  
 
-## Conslusion  
+## Conclusion  
 
 En conclusion durant cette séance de TP, nous avons appris à :  
 - Implémenter un code liée au schema FDTD
