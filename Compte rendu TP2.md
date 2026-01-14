@@ -1,5 +1,41 @@
 # Travaux pratiques 2 CEM : utilisation de la méthode DF pour la simulation CEM
 
+## Sommaire  
+
+<details>
+<summary><strong>📚 Sommaire</strong> (cliquer pour déplier)</summary>
+
+- [Contexte global](#contexte-global)
+  - [Objectifs](#objectifs)
+  - [Compétences visées](#compétences-visées)
+  - [Contrôle des connaissances](#contrôle-des-connaissances)
+
+- [Introduction](#introduction)
+
+- [1. Schéma FDTD](#1-schéma-fdtd)
+  - [1.1 Les équations de Maxwell](#11-les-équations-de-maxwell)
+    - [Généralités](#généralités)
+    - [Dans notre cas](#dans-notre-cas-à-nous)
+  - [1.2 Algorithmes à utiliser](#12-algorithmes-à-utiliser)
+  - [1.3 Test de la condition de stabilité](#13-test-de-la-condition-de-stabilité)
+    - [Exercice `scriptFTD01.m`](#exercice-scriptftd01m)
+
+- [2. Les sources d’excitation](#2-les-sources-dexcitation--scriptfdtd02-et-scriptfdtd03)
+  - [2.1 Sources temporelles](#21-les-sources-temporelles--scriptfdtd02)
+  - [2.2 Sources spatiales](#22-les-sources-spatiales--scriptfdtd03)
+
+- [3. Simulations en espace libre : conditions de non-réflexion](#3-simulations-en-espace-libre--les-conditions-de-non-réflexion--magic-time-step)
+  - [Cas α = 0.5](#pour-α05)
+  - [Cas α = 1](#pour-α--1)
+
+- [4. Traversée d’un diélectrique (1D)](#4-simuler-la-propagation-dune-onde-plane-pour-la-traversée-dun-diélectrique-1-d-sans-pertes--scriptfdtd05-et-scriptfdtd06)
+  - [`scriptFDTD05`](#scriptfdtd05)
+  - [`scriptFDTD06`](#scriptfdtd06)
+
+- [Conclusion](#fin)
+
+</details>  
+
 ## Contexte global  
 
 ### Objectifs :  
