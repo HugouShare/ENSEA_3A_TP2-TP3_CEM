@@ -65,6 +65,8 @@ Nx =  67; Ny =  84; Nz =  35; % Number of cells in each direction
 
 On ajoute une fonction permettant de calculer la fréquence de résonance  
 
+<img width="628" height="325" alt="image" src="https://github.com/user-attachments/assets/d82ff249-16ce-486e-874d-c552764f23ca" />
 
+<img width="1580" height="849" alt="image" src="https://github.com/user-attachments/assets/64e3d351-f07d-42c5-a0f0-a1240c090be2" />
 
 
