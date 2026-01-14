@@ -1,4 +1,4 @@
-# TP 2 CEM : utilisation de la méthode DF pour la simulation CEM
+# TP2 CEM : utilisation de la méthode DF pour la simulation CEM
 
 ## Sommaire  
 
@@ -32,7 +32,7 @@
   - [`scriptFDTD05`](#scriptfdtd05)
   - [`scriptFDTD06`](#scriptfdtd06)
 
-- [Conclusion](#fin)
+- [Conclusion](#conclusion)
 
 </details>  
 
@@ -370,5 +370,14 @@ On obtient alors :
 </p>
  
 <img width="1626" height="857" alt="image" src="https://github.com/user-attachments/assets/c1a6175d-1408-42d0-9dfa-dff79c5068e3" />  
+
+## Conslusion  
+
+En conclusion durant cette séance de TP, nous avons appris à :  
+- Implémenter un code liée au schema FDTD
+- Tester sur celui-ci différentes conditions de stabilités
+- Observer l'impact des sources temporelles et spatiales sur notre modèle
+- Simuler la propagation d'une onde en espace libre avec conditions de non-réflexion pour alpha = 0.5 et alpha = 1
+- Simuler la traversée d’un diélectrique en 1D  
 
 # FIN
